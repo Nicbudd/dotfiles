@@ -1,0 +1,61 @@
+#!/bin/bash
+
+# Win - \e[34mWin\e[0m
+# Ctrl - \e[32mCtrl\e[0m
+# Shift - \e[31mShift\e[0m
+# Alt - \e[35mAlt\e[0m
+
+# Enter - \e[35mEnter\e[0m
+# Space - \e[35mSpace\e[0m
+# Arrows - \e[35mArrows\e[0m
+# Number - \e[35mNumber\e[0m
+# Print - \e[35mPrint\e[0m
+
+
+echo -e "\n\e[1mApplications\e[0m"
+echo -e "\e[34mWin\e[0m + d              - dmenu"
+echo -e "\e[34mWin\e[0m + \e[35mEnter\e[0m          - Terminal"
+echo -e "\e[34mWin\e[0m + \e[31mShift\e[0m + \e[35mEnter\e[0m  - File Manager"
+echo -e "\e[34mWin\e[0m + \e[31mShift\e[0m + /      - Settings Manager"
+echo -e "\e[35mPrint\e[0m                - Screenshot"
+echo -e "\e[34mWin\e[0m + c              - Google Chrome"
+
+echo -e "\n\e[1mi3\e[0m"
+echo -e "\e[34mWin\e[0m + \e[31mShift\e[0m + c      - Reload .config File"
+echo -e "\e[34mWin\e[0m + \e[31mShift\e[0m + r      - Restart i3 inplace"
+echo -e "\e[34mWin\e[0m + \e[31mShift\e[0m + e      - Logout"
+
+echo -e "\n\e[1mFocus\e[0m"
+echo -e "\e[34mWin\e[0m + \e[35mSpace\e[0m          - Toggle Focus Floating/Tiling"
+echo -e "\e[34mWin\e[0m + \e[35mArrows\e[0m         - Move Focus"
+echo -e "\e[34mWin\e[0m + a              - Focus Parent"
+echo -e "\e[34mWin\e[0m + q              - Focus Child"
+
+echo -e "\n\e[1mWindow Management\e[0m"
+echo -e "\e[34mWin\e[0m + \e[31mShift\e[0m + q      - Kill Window"
+echo -e "\e[34mWin\e[0m + \e[31mShift\e[0m + \e[35mSpace\e[0m  - Toggle Floating"
+echo -e "\e[34mWin\e[0m + \e[31mShift\e[0m + \e[35mArrows\e[0m - Move Window"
+echo -e "\e[34mWin\e[0m + f              - Fullscreen"
+
+echo -e "\n\e[1mResize Mode\e[0m"
+echo -e "\e[34mWin\e[0m + r              - Resize Mode"
+echo -e "\e[35mArrows\e[0m               - Adjust Divider"
+echo -e "\e[33mAlt\e[0m + \e[35mArrows\e[0m         - Fine Adjust Divider"
+
+echo -e "\n\e[1mLayouts\e[0m"
+echo -e "\e[34mWin\e[0m + s              - Stacking Layout"
+echo -e "\e[34mWin\e[0m + w              - Tabbed Layout"
+echo -e "\e[34mWin\e[0m + e              - Toggle Split Layout"
+echo -e "\e[34mWin\e[0m + h              - Split Horizontal"
+echo -e "\e[34mWin\e[0m + v              - Split Vertical"
+
+echo -e "\n\e[1mWorkspaces\e[0m"
+echo -e "\e[34mWin\e[0m + \e[35mNumber\e[0m         - Switch to Workspace"
+echo -e "\e[34mWin\e[0m + \e[31mShift\e[0m + \e[35mNumber\e[0m - Move to Workspace"
+
+echo -e "\n\e[1mApplications\e[0m"
+echo -e "\e[34mWin\e[0m + \e[32mCtrl\e[0m + J       - Disable Touchscreen"
+echo -e "\e[34mWin\e[0m + \e[32mCtrl\e[0m + K       - Enable Touchscreen"
+
+
+echo -e "\n"
