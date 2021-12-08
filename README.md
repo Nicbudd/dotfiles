@@ -4,7 +4,7 @@ These are my dotfiles. Use them if you wish.
 
 There is a bash program called .shortcuts which lists out my i3 shortcuts in a nice colored out manner. Use it and update it as much as you want.
 
-There is also an atom syntax-theme package for this style too.
+There is also an atom syntax-theme package for this style too. It can be downloaded from here. https://github.com/Nicbudd/nicbudd-syntax
 
 ## Setup
 
