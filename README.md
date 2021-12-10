@@ -8,7 +8,7 @@ There is also an atom syntax-theme package for this style too. It can be downloa
 
 ## Setup
 
-I am running i3/XFCE/Debian on my laptop and AwesomeWM(hopefully i3 soon)/Kubuntu on my computer.
+I am running i3 / XFCE / Debian on my laptop and AwesomeWM (hopefully i3 soon) / Kubuntu on my computer.
 
 ## Neofetch
 
