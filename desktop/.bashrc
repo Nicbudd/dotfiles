@@ -134,7 +134,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
+conda config --set auto_activate_base false
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
