@@ -1,0 +1,65 @@
+general {
+	output_format = "i3bar"
+	colors = true
+	interval = 5
+	color_good = "#3ba769"
+	color_degraded = "#316fa6"
+	color_bad = "#c14747"
+}
+
+order += "ipv6"
+order += "disk /"
+#order += "run_watch DHCP"
+#order += "run_watch VPNC"
+#order += "path_exists VPN"
+order += "wireless wlp3s0"
+#order += "cpu_temperature 0"
+order += "memory"
+order += "volume master"
+#order += "load"
+order += "tztime utc"
+order += "tztime local"
+
+
+ipv6 {
+	format_up = "IPv6: %ip"
+	format_down = ""
+}
+
+disk "/" {
+  format = "%used / %free"
+}
+
+wireless wlp3s0 {
+	format_up = "%essid(%quality) %ip"
+	format_down = "Internet down"
+}
+
+volume master {
+	format = "🕪: %volume"
+	format_muted = "MUTED"
+}
+
+cpu_temperature 0 {
+        format = "CPU: %degrees °C"
+				max_threshold = 80
+}
+
+memory {
+        format = "RAM: %used"
+        threshold_degraded = "10%"
+        format_degraded = "MEMORY: %free"
+}
+
+load {
+				format = "%5min"
+}
+
+tztime local {
+        format = "%a %m/%d %I:%M %p"
+}
+
+tztime utc {
+        format = "%H:%M %Z"
+        timezone = "UTC"
+}

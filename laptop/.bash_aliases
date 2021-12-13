@@ -1,2 +1,3 @@
 alias dl="cd ~/Downloads"
-alias short="bash ~/.shortcuts"
+alias zulu="date -u +%H:%M"
+alias short="~/short"
