@@ -7,9 +7,10 @@ general {
 	color_bad = "#c14747"
 }
 
+order += "read_file weather"
 order += "ipv6"
 order += "disk /"
-#order += "run_watch DHCP"
+#order += "run_watch DHCP"v
 #order += "run_watch VPNC"
 #order += "path_exists VPN"
 order += "wireless wlp3s0"
@@ -20,6 +21,11 @@ order += "volume master"
 order += "tztime utc"
 order += "tztime local"
 
+read_file weather {
+	format = "%content"
+    path = "/var/currentconditions.log"
+
+}
 
 ipv6 {
 	format_up = "IPv6: %ip"
@@ -27,11 +33,11 @@ ipv6 {
 }
 
 disk "/" {
-  format = "%used / %free"
+  format = "%free free"
 }
 
 wireless wlp3s0 {
-	format_up = "%essid(%quality) %ip"
+	format_up = "%essid %ip"
 	format_down = "Internet down"
 }
 
@@ -46,9 +52,9 @@ cpu_temperature 0 {
 }
 
 memory {
-        format = "RAM: %used"
+        format = "%used RAM"
         threshold_degraded = "10%"
-        format_degraded = "MEMORY: %free"
+        format_degraded = "%free FREE"
 }
 
 load {

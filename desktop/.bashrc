@@ -6,6 +6,8 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/Downloads/lexurgy-1.0.1/bin
 export ELECTRON_TRASH=gio
 
+export QT_QPA_PLATFORMTHEME=qt5ct
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
