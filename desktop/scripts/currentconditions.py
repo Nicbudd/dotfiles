@@ -3,7 +3,7 @@ import time
 import re
 import degreesToCardinal as degr
 
-station = "PSM"
+station = "MHT"
 network = "NH_ASOS"
 
 def fToC(f):
@@ -85,7 +85,7 @@ def main():
     while True:
         f = formatData()
 
-        with open("/var/currentconditions.log", "w") as file:
+        with open("/tmp/currentconditions.log", "w") as file:
             file.write(f"{f}")
 
         time.sleep(60 * 5) # sleep 5 minutes
