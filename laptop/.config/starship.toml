@@ -1,0 +1,159 @@
+format = """
+[](bg:#7C56B5 fg:#303030)\
+$username\
+$sudo\
+$hostname\
+[](bg:#316FA6 fg:#7C56B5)\
+$directory\
+[](fg:#316FA6 bg:#3BA769)\
+$git_branch\
+$git_status\
+[](bg:#BF8060 fg:#3BA769)\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$python\
+[](fg:#BF8060 bg:#C14747)\
+$time\
+[ ](fg:#C14747)\
+$line_break\
+[>_ ](bold fg:#316fa6)
+"""
+
+right_format = """
+$status \
+$cmd_duration \
+"""
+
+# Disable the blank line at the start of the prompt
+# add_newline = false
+
+# You can also replace your username with a neat symbol like  to save some space
+[sudo]
+style = "bg:#7C56B5"
+symbol = "⏻ "
+disabled = false
+format = "[$symbol]($style)"
+
+[username]
+show_always = true
+style_user = "bg:#7C56B5"
+style_root = "bg:#C14747"
+format = '[ 🐺 ]($style)'
+
+[hostname]
+ssh_only = true
+format = '[@ $hostname](bg:#7C56B5 fg:#e6e6e6)'
+disabled = false
+
+[directory]
+style = "bg:#316FA6"
+format = "[ $path ]($style)[$read_only]($style)"
+read_only = "🔒"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"github" = ""
+# Keep in mind that the order matters. For example:
+# "Important Documents" = "  "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important  " = "  "
+
+[c]
+symbol = " "
+style = "bg:#BF8060"
+format = '[[ $symbol ($version) ](bg:#BF8060)]($style)'
+
+[elixir]
+symbol = " "
+style = "bg:#BF8060"
+format = '[[ $symbol ($version) ](bg:#BF8060)]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#BF8060"
+format = '[[ $symbol ($version) ](bg:#BF8060)]($style)'
+
+[git_branch]
+symbol = ""
+style = "bg:#3BA769"
+format = '[[ $symbol $branch ](bg:#3BA769)]($style)'
+
+[git_status]
+style = "bg:#3BA769"
+format = '[[($all_status$ahead_behind )](bg:#3BA769)]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#BF8060"
+format = '[[ $symbol ($version) ](bg:#BF8060)]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#BF8060"
+format = '[[ $symbol ($version) ](bg:#BF8060)]($style)'
+
+[java]
+symbol = " "
+style = "bg:#BF8060"
+format = '[[ $symbol ($version) ](bg:#BF8060)]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#BF8060"
+format = '[[ $symbol ($version) ](bg:#BF8060)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#BF8060"
+format = '[[ $symbol ($version) ](bg:#BF8060)]($style)'
+
+[nim]
+symbol = " "
+style = "bg:#BF8060"
+format = '[[ $symbol ($version) ](bg:#BF8060)]($style)'
+
+[rust]
+symbol = "🦀"
+style = "bg:#BF8060"
+format = '[[ $symbol ($version $toolchain) ](bg:#BF8060)]($style)'
+
+[python]
+symbol = "🐍"
+style = "bg:#BF8060"
+format = '[[ $symbol ($version) ](bg:#BF8060)]($style)'
+
+[time]
+disabled = false
+time_format = "%I:%M %p" # Hour:Minute Format
+style = "bg:#C14747"
+format = '[[ $time ](bg:#C14747)]($style)'
+
+[cmd_duration]
+min_time = 500
+disabled = false
+style = "fg:#E6E6E6"
+format = " [$duration]($style)"
+
+[status]
+symbol = "[](fg:#C14747)"
+success_symbol = "[](fg:#3BA769)"
+format = '[$symbol ($common_meaning )($signal_name )($maybe_int )]($style)'
+map_symbol = true
+disabled = false
+
