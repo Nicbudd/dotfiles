@@ -16,7 +16,7 @@ for_window [class=".*"] border pixel 0
 set $mod Mod4
 
 # Font for window titles.
-font pango: Hack Bold 10
+font pango: Hack Nerd Font Mono Bold 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -45,16 +45,15 @@ floating_modifier $mod
 
 # application shortcuts
 bindsym $mod+Return exec --no-startup-id alacritty                     # terminal
-bindsym $mod+Shift+Return exec --no-startup-id pcmanfm                 # file manager
-bindsym $mod+Shift+slash exec --no-startup-id xfce4-settings-manager   # settings manager
+bindsym $mod+f exec --no-startup-id nemo                               # file manager
 bindsym $mod+c exec --no-startup-id firefox                            # web browser
-bindsym $mod+a exec --no-startup-id atom                               # text editor
+bindsym $mod+a exec --no-startup-id codium                             # text editor
 bindsym $mod+d exec --no-startup-id dmenu_run                          # dmenu
 
 # screenshot tool
-bindsym Print exec --no-startup-id xfce4-screenshooter
-bindsym $mod+Shift+Print exec --no-startup-id xfce4-screenshooter -cr
-bindsym Mod1+Print exec --no-startup-id xfce4-screenshooter -cw
+bindsym Print exec --no-startup-id spectacle -r
+#bindsym $mod+Shift+Print exec --no-startup-id xfce4-screenshooter -cr
+#bindsym Mod1+Print exec --no-startup-id xfce4-screenshooter -cw
 
 # some additional xfce4-screenshooter options
 
@@ -90,7 +89,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+g fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -123,7 +122,7 @@ set $ws9 "9"
 set $ws10 "10"
 set $wsSpotify "SP"
 set $wsDiscord "DS"
-set $wsTransmission "TR"
+#set $wsTransmission "TR"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -201,7 +200,6 @@ mode "resize" {
      bindsym Up resize shrink height $vert_adj_large
      bindsym Right resize grow width $horz_adj_large
 
-
      #alt keys to do smaller adjustments
      bindsym Mod1+j resize shrink width $horz_adj
      bindsym Mod1+k resize grow height $vert_adj
@@ -248,27 +246,31 @@ exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agen
 
 exec --no-startup-id dunst & # notifications
 exec --no-startup-id nitrogen --restore &
-exec --no-startup-id compton
-exec --no-startup-id xfce4-clipman
-exec --no-startup-id rsibreak
+#exec --no-startup-id compton
+#exec --no-startup-id gpaste
+#exec --no-startup-id rsibreak
 
 # custom scripts
 
 bindsym $mod+Shift+w python3 ~/scripts/currentconditions.py # update current conditions
 exec --no-startup-id python3 ~/scripts/currentconditions.py # update current conditions
-# exec --no-startup-id bash ~/.screenlayout/default.sh
+exec --no-startup-id bash ~/.screenlayout/default.sh
 
 # open applications
 exec --no-startup-id discord
 exec --no-startup-id spotify
-exec --no-startup-id transmission-gtk
+#exec --no-startup-id transmission-gtk
 
 # put windows on custom workspaces automatically
 assign [class="Discord"] → $wsDiscord
 assign [class="Spotify"] → $wsSpotify
 for_window [class="Spotify"] move to workspace $wsSpotify
-assign [class="Transmission"] → $wsTransmission
-for_window [class="Transmission"] move to workspace $wsTransmission
+#assign [class="Transmission"] → $wsTransmission
+#for_window [class="Transmission"] move to workspace $wsTransmission
+
+
+# automatic floating
+for_window [class="spectacle"] floating enable
 
 
 gaps inner 10

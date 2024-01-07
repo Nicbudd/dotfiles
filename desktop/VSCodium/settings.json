@@ -1,0 +1,60 @@
+{
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "editor.minimap.enabled": false,
+    "rust-client.engine": "rust-analyzer",
+    "editor.bracketPairColorization.enabled": false,
+    "workbench.colorTheme": "Nicbudd",
+
+    "editor.inlayHints.fontSize": 10,
+  
+    "workbench.colorCustomizations": {
+      // Name of the theme you are currently using
+      "[Nicbudd]": {
+        "editorInlayHint.foreground": "#e6e6e6ff",
+        "editorInlayHint.background": "#30303000",
+  
+        // Overrides for specific kinds of inlay hints
+        "editorInlayHint.typeForeground": "#3ba7699f",
+        "editorInlayHint.parameterForeground": "#316fa69f",
+
+        "editorError.foreground": "#c14747",
+        "editorWarning.foreground": "#bf8060",
+        "editorInfo.foreground": "#316fa6",
+
+        "errorLens.errorBackground": "#c147472f",
+        "errorLens.warningBackground": "#bf80601f",
+        "errorLens.infoBackground": "#316fa62f",
+
+        "errorLens.errorForeground": "#c14747",
+        "errorLens.warningForeground": "#bf8060ff",
+        "errorLens.infoForeground": "#316fa6",
+      }
+    },
+
+    "errorLens.enabledDiagnosticLevels": [
+      "error",
+      "warning",
+      "info"
+    ],
+    "errorLens.fontSize": "12",
+    "errorLens.gutterIconsEnabled": false,
+    "errorLens.fontWeight": "bold",
+    "debug.allowBreakpointsEverywhere": true,
+
+
+
+    "editor.fontFamily": "'Fira Code', 'Hack Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontLigatures": "'calt', 'cv06', 'ss01', 'cv14', 'ss05', 'ss03', 'cv15', 'ss02'",
+    "terminal.integrated.drawBoldTextInBrightColors": false,
+    "terminal.integrated.ignoreProcessNames": [
+      "starship",
+      "oh-my-posh",
+      "bash",
+      "zsh",
+      "fish"
+    ],
+    "terminal.integrated.minimumContrastRatio": 1,
+    "github.gitAuthentication": false
+    // https://github.com/tonsky/FiraCode
+}

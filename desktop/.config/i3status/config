@@ -12,7 +12,7 @@ order += "ipv6"
 #order += "run_watch DHCP"v
 #order += "run_watch VPNC"
 #order += "path_exists VPN"
-order += "wireless wlp3s0"
+order += "ethernet enp4s0"
 #order += "disk /win"
 #order += "disk /flop"
 order += "disk /wd1"
@@ -26,7 +26,7 @@ order += "tztime local"
 
 read_file weather {
 	format = "%content"
-  path = "/tmp/currentconditions.log"
+  	path = "/tmp/currentconditions.log"
 
 }
 
@@ -35,24 +35,12 @@ ipv6 {
 	format_down = ""
 }
 
-disk "/win" {
-  format = "%free /win"
-}
-
-disk "/wd1" {
-  format = "%free /wd1"
-}
-
-disk "/flop" {
-  format = "%free /flop"
-}
-
 disk "/" {
-  format = "%free /"
+  	format = "%free /"
 }
 
-wireless wlp3s0 {
-	format_up = "%essid (%bitrate), %ip"
+ethernet enp4s0 {
+	format_up = "%speed @ %ip"
 	format_down = "Internet down"
 }
 
@@ -63,7 +51,7 @@ volume master {
 
 cpu_temperature 0 {
         format = "CPU: %degrees °C"
-				max_threshold = 80
+	max_threshold = 80
 }
 
 memory {
@@ -73,7 +61,7 @@ memory {
 }
 
 load {
-				format = "LOADS: %5min"
+	format = "LOADS: %5min"
 }
 
 tztime local {
