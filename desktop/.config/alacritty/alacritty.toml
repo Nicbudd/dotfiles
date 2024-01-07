@@ -1,0 +1,46 @@
+#dynamic_title = true
+
+[scrolling]
+history = 5000
+
+[bell]
+animation = "EaseOut"
+color = "0x316fa6"
+duration = 150
+
+[colors.bright]
+black = "0x949494"
+blue = "0x316fa6"
+cyan = "0x6db88d"
+green = "0x3ba769"
+magenta = "0x7c56b5"
+red = "0xc14747"
+white = "0xe6e6e6"
+yellow = "0xbf8060"
+
+[colors.normal]
+black = "0x303030"
+blue = "0x316fa6"
+cyan = "0x6db88d"
+green = "0x3ba769"
+magenta = "0x7c56b5"
+red = "0xc14747"
+white = "0xc3c3c3"
+yellow = "0xbf8060"
+
+[colors.primary]
+background = "0x303030"
+foreground = "0xe6e6e6"
+
+[font]
+size = 10.0
+
+[font.normal]
+family = "Hack Nerd Font Mono"
+
+[window.padding]
+x = 10
+y = 10
+
+[shell]
+program = "/bin/fish"
